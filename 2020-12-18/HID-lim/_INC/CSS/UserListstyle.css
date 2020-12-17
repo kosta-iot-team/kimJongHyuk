@@ -1,0 +1,131 @@
+.switch input {
+    display: none;
+}
+
+.switch {
+    display: inline-block;
+    width: 60px; /*=w*/
+    height: 30px; /*=h*/
+    margin: 8px;
+    transform: translateY(50%);
+    position: relative;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 30px;
+    box-shadow: 0 0 0 2px #777, 0 0 4px #777;
+    cursor: pointer;
+    border: 4px solid transparent;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #777;
+        border-radius: 30px;
+        transform: translateX(-30px); /*translateX(-(w-h))*/
+        transition: 0.4s;
+    }
+
+input:checked + .slider:before {
+    transform: translateX(30px); /*translateX(w-h)*/
+    background-color: blue;
+}
+
+input:checked + .slider {
+    box-shadow: 0 0 0 2px Blue, 0 0 8px Blue;
+}
+
+.switch200 .slider:before {
+    width: 200%;
+    transform: translateX(-82px); /*translateX(-(w-h))*/
+}
+
+.switch200 input:checked + .slider:before {
+    background-color: blue;
+}
+
+.switch200 input:checked + .slider {
+    box-shadow: 0 0 0 2px blue, 0 0 8px blue;
+}
+
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: blue;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+
+}
+
+    .styled:hover {
+        background-color: blue;
+    }
+
+    .styled:active {
+        box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+    }
+
+
+
+.plusButton {
+    font-size: 24px !important
+}
+
+.plus-button {
+    border: 0px solid blue;
+    background-color: blue;
+    font-size: 16px;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 999px;
+    position: relative;
+}
+
+    .plus-button:after, .plus-button:before {
+        content: "";
+        display: block;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .plus-button:before {
+        height: 1em;
+        width: 0.2em;
+    }
+
+    .plus-button:after {
+        height: 0.2em;
+        width: 1em;
+    }
+
+.plus-button--large {
+    font-size: 22px;
+}
+
+
+#box{
+     width: 1200px;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     -ms-flex-wrap: wrap;
+     -webkit-flex-wrap: wrap;
+     flex-wrap: wrap;
+}

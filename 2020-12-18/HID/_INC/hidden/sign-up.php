@@ -1,0 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION["login-{$root}"])){?>
+    <script>
+        location.href='<?=$root?>';
+    </script><?php
+    exit;
+}
+?>

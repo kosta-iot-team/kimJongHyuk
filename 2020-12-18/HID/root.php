@@ -1,0 +1,1 @@
+<?php $root='PAGE/hid';?>
