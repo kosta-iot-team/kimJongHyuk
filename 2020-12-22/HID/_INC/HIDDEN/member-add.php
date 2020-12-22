@@ -1,0 +1,15 @@
+<?php
+session_start();
+if(!isset($_SESSION["login-{$ROOT}"])){?>
+    <script>
+        location.href='<?=$ROOT?>';
+    </script><?php
+    exit;
+}
+if($_SESSION['admin']!=true){
+    ?><script>
+        history.back();
+    </script><?php
+    exit;
+}
+?>
